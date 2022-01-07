@@ -1,0 +1,740 @@
+/* 에스코어드림 */
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream-4Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream-5Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream-6Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 조선 일보 명조체  */
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: #333333;
+  background: url(images/back.jpg);
+  font-family: "S-CoreDream-3Light";
+}
+
+/* 로딩바 */
+
+/* 주석 css */
+.footnote {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: "Chosunilbo_myungjo";
+  margin-right: 50px;
+  font-size: 1.3em;
+  color: #666666;
+  right: 0;
+  position: absolute;
+  z-index: 9999;
+}
+#web_p .footnote {
+  overflow: hidden;
+}
+
+#profile,
+#web_p,
+#UI,
+#branding {
+  overflow: hidden;
+}
+
+header,
+#contact {
+  overflow: hidden;
+}
+
+/* header pc모드 */
+@media screen and (min-width: 1201px) {
+  header .border {
+    height: 1080px;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    padding: 30px;
+  }
+  #border_wrapper {
+    border: 1.5px solid #333333;
+  }
+  #mobile_nav {
+    display: none;
+  }
+}
+
+/* header 테블릿 pc 모드 */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header .border {
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .border {
+    height: 680px;
+  }
+}
+/* header 모바일모드 */
+@media screen and (max-width: 768px) {
+  #web_nav {
+    display: none;
+  }
+  .footnote {
+    display: none;
+  }
+
+  #mobile_nav ul {
+    display: none;
+    width: 100%;
+  }
+  #mobile_nav > a > img {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+  #mobile_nav > ul > li {
+    width: 100%; /* 모바일 모드에서 메뉴 가로 사이즈 100%*/
+    text-align: center; /* 텍스트 중간 정렬 */
+    list-style: none;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  #mobile_nav > ul > li > a {
+    line-height: 70px; /* 메뉴 줄간격 설정 */
+    text-decoration: none;
+    color: white;
+    font-family: "Chosunilbo_myungjo";
+    font-size: 1.1em;
+  }
+
+  /* 토글 메뉴 스타일 지정 */
+  nav a#toggle {
+    display: block; /* a 태그를 block 공간으로 지정 */
+    width: 100%;
+  }
+}
+/* main title 부분 */
+section h2 {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Chosunilbo_myungjo";
+}
+#profile h2.no-background {
+  margin-top: 100px;
+}
+h2.no-background {
+  position: relative;
+  overflow: hidden;
+}
+h2.no-background span {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  position: relative;
+  padding: 0 20px;
+}
+h2.no-background span:before,
+h2.no-background span:after {
+  content: "";
+  display: block;
+  width: 1000px;
+  position: absolute;
+  top: 0.6em;
+  border-top: 1.5px solid #333;
+}
+h2.no-background span:before {
+  right: 100%;
+}
+h2.no-background span:after {
+  left: 100%;
+}
+/* main title,profile pc 부분 */
+@media screen and (min-width: 1025px) {
+  section h2 {
+    font-size: 2em;
+  }
+  h2.no-background {
+    margin: 0 50px;
+    margin-top: 200px;
+    padding-bottom: 150px;
+  }
+  #profile_wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #profile_wrapper #picture_wrapper {
+    border-right: 1.5px solid #333333;
+    padding-right: 50px;
+    width: 48%;
+  }
+  #profile_wrapper #skills_wrapper {
+    padding-left: 50px;
+    width: 48%;
+  }
+  #profile_wrapper #picture_wrapper h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #profile_wrapper #picture_wrapper #profile_img {
+    width: 50%;
+    padding-bottom: 40px;
+  }
+  #profile_wrapper #picture_wrapper h3 {
+    font-size: 1.6em;
+  }
+  #profile_wrapper #skills_wrapper #skills_title {
+    padding-bottom: 50px;
+    font-size: 1.6em;
+  }
+  section article.skills {
+    width: 80%;
+    height: auto;
+  }
+  #top_btn {
+    border-radius: 40px;
+    width: 80px;
+    height: 80px; /* 투명 배경 */
+    line-height: 80px;
+    font-size: 1.5em;
+    right: 150px;
+    bottom: 60px; /* 위치를 절대값으로 고정 */
+  }
+}
+/* main title 테블릿pc 부분 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section h2 {
+    font-size: 1.8em;
+  }
+  h2.no-background {
+    margin: 0 50px;
+    margin-top: 200px;
+    padding-bottom: 150px;
+  }
+  #profile_wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #profile_wrapper #picture_wrapper {
+    border-right: 1.5px solid #333333;
+    padding-right: 50px;
+    width: 48%;
+  }
+  #profile_wrapper #picture_wrapper h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #profile_wrapper #skills_wrapper {
+    padding-left: 50px;
+    width: 48%;
+  }
+  #profile_wrapper #picture_wrapper #profile_img {
+    width: 50%;
+    padding-bottom: 40px;
+  }
+  #profile_wrapper #picture_wrapper h3 {
+    font-size: 1.6em;
+  }
+  #profile_wrapper #skills_wrapper #skills_title {
+    padding-bottom: 50px;
+    font-size: 1.6em;
+    margin-top: 50px;
+  }
+  section article.skills {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+  #top_btn {
+    border-radius: 40px;
+    width: 80px;
+    height: 80px; /* 투명 배경 */
+    line-height: 80px;
+    font-size: 1.5em;
+    right: 150px;
+    bottom: 60px; /* 위치를 절대값으로 고정 */
+  }
+}
+/* main title 모바일모드 부분 */
+@media screen and (max-width: 768px) {
+  #profile h2 {
+    font-size: 1.6em;
+  }
+  #branding h2 {
+    font-size: 1.6em;
+  }
+  #UI h2 {
+    font-size: 1.6em;
+  }
+  #web_p h2 {
+    font-size: 1.4em;
+  }
+  h2.no-background {
+    margin: 0 25px;
+    margin-top: 100px;
+    padding-bottom: 70px;
+  }
+  #profile_wrapper {
+    width: 90%;
+  }
+  #profile_img {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  #detail {
+    padding-bottom: 25px;
+  }
+  #edu {
+    padding-bottom: 25px;
+  }
+  #profile_wrapper #picture_wrapper h3 {
+    font-size: 1.2em;
+  }
+  #profile_wrapper #picture_wrapper p {
+    font-size: 0.9em;
+  }
+  #profile_wrapper #picture_wrapper h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  #profile_wrapper #skills_wrapper #skills_title {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 1.2em;
+  }
+  section article.skills h3 {
+    font-size: 1em;
+  }
+  section article.skills {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  #top_btn {
+    border-radius: 30px;
+    width: 60px;
+    height: 60px; /* 투명 배경 */
+    line-height: 60px;
+    font-size: 1.2em;
+    right: 50px;
+    bottom: 50px; /* 위치를 절대값으로 고정 */
+  }
+}
+
+/* profile 부분 */
+#profile_wrapper {
+  margin: 0 auto;
+}
+#profile_wrapper #picture_wrapper p {
+  line-height: 30px;
+}
+
+/* a padding pc모드 */
+@media screen and (min-width: 1501px) {
+  #web_nav {
+    width: 65%;
+  }
+}
+
+/* a padding 테블릿pc모드 */
+@media screen and (min-width: 769px) and (max-width: 1500px) {
+  #web_nav {
+    width: 90%;
+  }
+  #web_nav li:nth-child(2) {
+    font-size: 0.9em;
+  }
+}
+
+#web_nav {
+  padding-top: 40px;
+  margin: 0 auto;
+  font-family: "Chosunilbo_myungjo";
+  font-weight: bold;
+}
+
+#web_nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+#web_nav li {
+  width: 20%;
+  list-style: none;
+  border-right: 1.8px solid #333333;
+  text-align: center;
+}
+#web_nav li:last-child {
+  border-right: 0px;
+}
+
+#web_nav a {
+  text-decoration: none;
+  color: #333333;
+  padding: 0 15px;
+}
+
+/* profile chart 부분 */
+.skills {
+  animation-name: skills;
+}
+
+section article.skills h3 {
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+section article.skills h3:nth-child(1) {
+  padding-top: 0px;
+}
+section article.skills p {
+  z-index: 2;
+  color: #333;
+  font-size: 0.8em;
+  padding: 5px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: right;
+}
+section article.skills div span:nth-child(1) {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fefefe;
+  height: 100%;
+  width: 100%;
+}
+section article.skills div span:nth-child(2) {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #333, #d2d2d2);
+  height: 100%;
+}
+section article.skills div:nth-child(2) span:nth-child(2) {
+  width: 90%;
+  animation-delay: 0;
+}
+section article.skills div:nth-child(4) span:nth-child(2) {
+  width: 80%;
+  animation-delay: 0.05s;
+}
+section article.skills div:nth-child(6) span:nth-child(2) {
+  width: 70%;
+  animation-delay: 0.1s;
+}
+section article.skills div:nth-child(8) span:nth-child(2) {
+  width: 80%;
+  animation-delay: 0.15s;
+}
+section article.skills div:nth-child(10) span:nth-child(2) {
+  width: 80%;
+  animation-delay: 0.2s;
+}
+section article.skills div:nth-child(12) span:nth-child(2) {
+  width: 80%;
+  animation-delay: 0.25s;
+}
+
+.skills {
+  animation: skills 1.25s cubic-bezier(0.17, 0.67, 0, 1);
+}
+@keyframes skills {
+  0% {
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+/* branding 부분 */
+/* branding pc 부분 */
+@media screen and (min-width: 1025px) {
+  #branding #branding_flex {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #branding .b_flex_st img {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+  #branding .b_flex_st p {
+    font-size: 1.1em;
+  }
+}
+/* branding 테블릿pc 부분 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #branding #branding_flex {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #branding .b_flex_st img {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+  #branding .b_flex_st p {
+    font-size: 1.2em;
+  }
+}
+/* branding 모바일모드 부분 */
+@media screen and (max-width: 768px) {
+  #branding #branding_flex {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #branding .brand_img {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 120px;
+  }
+  #branding .brand_img img {
+    width: auto;
+  }
+}
+
+#branding .b_flex_st p {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* contact 부분 */
+/* contact pc 부분 */
+@media screen and (min-width: 1025px) {
+  #contact .border {
+    height: 810px;
+  }
+  #contact #contact_wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #contact #contact_text {
+    width: 40%;
+    font-size: 4em;
+    padding-top: 270px;
+    line-height: 55px;
+  }
+  #contact #contact_flex {
+    width: 55%;
+    padding-top: 330px;
+  }
+  #sns {
+    text-align: center;
+    width: 20%;
+  }
+
+  #sns p {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: "S-CoreDream-4Regular";
+  }
+  #sns p:nth-child(4) {
+    font-size: 0.8em;
+  }
+}
+/* contact 테블릿pc 부분 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #contact .border {
+    height: 700px;
+  }
+  #contact #contact_wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #contact #contact_text {
+    width: 50%;
+    font-size: 3em;
+    padding-top: 270px;
+    line-height: 45px;
+  }
+  #contact #contact_flex {
+    width: 40%;
+    padding-top: 260px;
+    flex-wrap: wrap;
+  }
+  #sns {
+    text-align: center;
+    width: 40%;
+  }
+  #sns:nth-child(1) {
+    margin-bottom: 35px;
+  }
+  #sns:nth-child(2) {
+    margin-bottom: 35px;
+  }
+
+  #sns p {
+    display: none;
+  }
+  #sns p:nth-child(4) {
+    font-size: 0.8em;
+  }
+}
+/* contact 모바일모드 부분 */
+@media screen and (max-width: 768px) {
+  #contact #contact_wrapper {
+    width: 90%;
+  }
+  #contact #contact_text {
+    font-size: 2.5em;
+    padding-top: 30px;
+    line-height: 35px;
+  }
+  #contact #contact_text p:nth-child(4) {
+    display: none;
+  }
+  #contact #contact_flex {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #sns {
+    text-align: center;
+    width: 20%;
+    margin-top: 60px;
+  }
+  #sns img {
+    text-align: center;
+    width: 80%;
+  }
+  #sns p {
+    display: none;
+  }
+}
+#contact {
+  padding: 30px;
+}
+
+#contact #contact_wrapper {
+  margin: 0 auto;
+}
+#contact #contact_text {
+  text-align: center;
+  font-family: "S-CoreDream-6Bold";
+}
+#contact #contact_text p:nth-child(2) {
+  -webkit-text-stroke: 1px #333;
+  color: transparent;
+}
+#contact #contact_text p:nth-child(3) {
+  -webkit-text-stroke: 1px #333;
+  color: transparent;
+}
+#contact #contact_text p:nth-child(4) {
+  -webkit-text-stroke: 1px #333;
+  color: transparent;
+}
+#contact #contact_text p:nth-child(5) {
+  -webkit-text-stroke: 1px #333;
+  color: transparent;
+}
+#contact #contact_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 탑버튼 */
+#top_btn {
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: fixed;
+}
+#top_btn a {
+  font-family: "Chosunilbo_myungjo";
+  text-decoration: none;
+  color: white;
+}
+#top_btn a:hover {
+  color: #333;
+}
+
+/* scroll animation*/
+#arrow_wrapper {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+}
+
+.arrow {
+  transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #333333;
+  border-right: 5px solid #333333;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}

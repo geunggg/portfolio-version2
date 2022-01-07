@@ -1,0 +1,62 @@
+
+.text_01 {
+  animation: layerize cubic-bezier(0.4, 0, 0.2, 1) 1200ms 200ms infinite alternate;
+  opacity: 0;
+  width: 100%;
+  color: #333333;
+  font: italic 500 5vmin "S-CoreDream-4Regular";
+  cursor: default;
+  user-select: none;
+  text-align: center;
+  padding-top:230px;
+}
+
+.text {
+  padding-top: 30px;
+  animation: layerize cubic-bezier(0.4, 0, 0.2, 1) 1200ms 200ms infinite alternate;
+  opacity: 0;
+  width: 100%;
+  color: #333333;
+  font: italic 500 15vmin "S-CoreDream-4Regular";
+  cursor: default;
+  user-select: none;
+  text-align: center;
+}
+/* pc모드 */
+@media screen and (min-width:1201px) {
+  .text {
+    font: italic 500 20vmin "S-CoreDream-4Regular";
+    padding-top: 10px;
+  }
+  .text_01 {
+    padding-top:320px;
+  }
+}
+
+/* 테블릿 pc 모드 */
+@media screen and (min-width:768px) and (max-width:1200px) {
+  .text_01 {
+    padding-top:340px;
+  }
+}
+
+/* header 모바일모드 */
+@media screen and (max-width:767px) {
+  .text_01 {
+    padding-top:250px;
+  }
+}
+
+
+@keyframes layerize {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+    text-shadow: 0 0 transparent, 0em 0em rgba(051, 051, 051, 0.4), 0em 0em rgba(051, 051, 051, 0.3), 0em 0em rgba(051, 051, 051, 0.2), 0em 0em rgba(051, 051, 051, 0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-0.066666em, -0.066666em);
+    text-shadow: 0 0 transparent, 0.033333em 0.033333em rgba(051, 051, 051, 0.4), 0.066666em 0.066666em rgba(051, 051, 051, 0.3), 0.099999em 0.099999em rgba(051, 051, 051, 0.2), 0.133332em 0.133332em rgba(051, 051, 05, 0.1);
+  }
+}
